@@ -5,13 +5,13 @@
 
 pool:
   vmImage: ubuntu-latest
+
 steps:
-- task: sonarCloudPrepare@1
+- task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'Sonarcloud'
-    organization: 'devops-testv2'
+    SonarCloud: 'SonarCloud'
+    organization: 'devops-test-v2-cfajardo'
     scannerMode: 'Other'
-    
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
@@ -19,6 +19,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
+    sqGradlePluginVersionChoice: 'specify'
+    sonarQubeGradlePluginVersion: '2.6.1'
     spotBugsAnalysis: false
-
