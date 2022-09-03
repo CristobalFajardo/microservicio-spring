@@ -6,6 +6,12 @@
 pool:
   vmImage: ubuntu-latest
 steps:
+- task: sonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'Sonarcloud'
+    organization: 'devops-testv2'
+    scannerMode: 'Other'
+    
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
