@@ -43,7 +43,7 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarcloud'
-    organization: 'microservicio-spring'
+    organization: 'devops-test-v2-cfajardo'
     projectKey: 'DevOps-Foundation-v2_microservicio-spring'
     projectName: 'microservicio-spring'
     extraProperties: |
