@@ -26,6 +26,6 @@ steps:
     SonarCloud: 'SonarCloud'
     organization: 'devops-test-v2-cfajardo'
     scannerMode: 'MSBuild'
-    projectKey: '123456789'
+    projectKey: 'devops-ms-tests'
     projectName: 'projectName'
   
