@@ -18,7 +18,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
     #sqGradlePluginVersionChoice: 'build'
     spotBugsAnalysis: false
 
@@ -27,4 +27,6 @@ steps:
     SonarCloud: 'SonarCloud'
     organization: 'devops-test-v2-cfajardo'
     scannerMode: 'Other'
-  
+    extraProperties: |
+      sonar.coverage.jacoco.xmlReportPaths=$(Pipeline.Workspace)/appJar/build/reports/jacoco/test/jacocoTestReport.xml
+
