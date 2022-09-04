@@ -21,11 +21,10 @@ steps:
     sonarQubeRunAnalysis: false
     #sqGradlePluginVersionChoice: 'build'
     spotBugsAnalysis: false
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'devops-test-v2-cfajardo'
-    scannerMode: 'MSBuild'
-    projectKey: 'devops-ms-tests'
-    projectName: 'projectName'
+    scannerMode: 'Other'
   
