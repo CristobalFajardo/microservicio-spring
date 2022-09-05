@@ -58,9 +58,7 @@ steps:
   
 - task: Docker@2
   inputs:
-    containerRegistry: 'Docker'
+    containerRegistry: 'docker-hub'
     repository: 'cristobalfajardo/devops-cristobal'
-    command: 'build'
-    Dockerfile: '**/Dockerfile'
-    tags: latest
-  displayName: Build Image
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile''
