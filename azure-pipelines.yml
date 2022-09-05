@@ -51,15 +51,16 @@ steps:
   displayName: 'Preparing Sonarqube Environment'
 
 - task: Docker@2
+  displayName: Docker registry login
   inputs:
     containerRegistry: 'Docker'
     command: 'login'
-  displayName: Docker registry login
+ 
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
     repository: 'cristobalfajardo/devops-cristobal'
-    command: 'build'
+    command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: latest
   displayName: Build Image
