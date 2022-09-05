@@ -50,15 +50,3 @@ steps:
       sonar.coverage.jacoco.xmlReportPaths=$(Pipeline.Workspace)/appJar/build/reports/jacoco/test/jacocoTestReport.xml
   displayName: 'Preparing Sonarqube Environment'
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker'
-    command: 'login'
-  displayName: Docker registry login
-  
-- task: Docker@2
-  inputs:
-    containerRegistry: 'docker-hub'
-    repository: 'cristobalfajardo/devops-cristobal'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
