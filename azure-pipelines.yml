@@ -61,4 +61,4 @@ steps:
     containerRegistry: 'docker-hub'
     repository: 'cristobalfajardo/devops-cristobal'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile''
+    Dockerfile: '**/Dockerfile'
